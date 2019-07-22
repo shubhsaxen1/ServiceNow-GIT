@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <misc>0</misc>
+        <order>200</order>
+        <question display_value="Type of Ticket">20769a301bba7300d8ab2136ec4bcbab</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>Vikas</sys_created_by>
+        <sys_created_on>2019-07-20 02:37:08</sys_created_on>
+        <sys_id>5e671afc1b7a7300d8ab2136ec4bcb20</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Query</sys_name>
+        <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_update_name>question_choice_5e671afc1b7a7300d8ab2136ec4bcb20</sys_update_name>
+        <sys_updated_by>Vikas</sys_updated_by>
+        <sys_updated_on>2019-07-20 02:37:08</sys_updated_on>
+        <text>Query</text>
+        <value>query</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=5e671afc1b7a7300d8ab2136ec4bcb20"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>misc</field>
+        <id>5e671afc1b7a7300d8ab2136ec4bcb20</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>Vikas</sys_created_by>
+        <sys_created_on>2019-07-20 02:37:08</sys_created_on>
+        <sys_id>c97756701bba7300d8ab2136ec4bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Vikas</sys_updated_by>
+        <sys_updated_on>2019-07-20 02:37:08</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_misc</field>
+        <id>5e671afc1b7a7300d8ab2136ec4bcb20</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>Vikas</sys_created_by>
+        <sys_created_on>2019-07-20 02:37:08</sys_created_on>
+        <sys_id>cd771afc1b7a7300d8ab2136ec4bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Vikas</sys_updated_by>
+        <sys_updated_on>2019-07-20 02:37:08</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

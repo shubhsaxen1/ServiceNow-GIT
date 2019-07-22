@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_380489_git_porta.msp_service_kot_user" name="x_380489_git_porta.msp_service_kot_user">a14a4e2c1bbe3300d8ab2136ec4bcb2f</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>shubham</sys_created_by>
+        <sys_created_on>2019-07-19 07:01:04</sys_created_on>
+        <sys_id>a94a4e2c1bbe3300d8ab2136ec4bcb31</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>a14a4e2c1bbe3300d8ab2136ec4bcb2f</sys_name>
+        <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_update_name>sys_embedded_help_role_a94a4e2c1bbe3300d8ab2136ec4bcb31</sys_update_name>
+        <sys_updated_by>shubham</sys_updated_by>
+        <sys_updated_on>2019-07-19 07:01:04</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

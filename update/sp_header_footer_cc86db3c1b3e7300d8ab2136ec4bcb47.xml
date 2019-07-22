@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.legalFooter {
+  padding-bottom : 20px; 
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Stock Footer Scoped</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+	var id = $sp.getParameter('id');
+	data.footer = gs.nil(id) || id === 'details';
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>Shubham</sys_created_by>
+        <sys_created_on>2019-07-20 07:12:36</sys_created_on>
+        <sys_id>cc86db3c1b3e7300d8ab2136ec4bcb47</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Stock Footer Scoped</sys_name>
+        <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_update_name>sp_header_footer_cc86db3c1b3e7300d8ab2136ec4bcb47</sys_update_name>
+        <sys_updated_by>Shubham</sys_updated_by>
+        <sys_updated_on>2019-07-20 07:15:59</sys_updated_on>
+        <template><![CDATA[<div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        ${Atos Confidential. © Atos, Inc. All rights reserved.}
+      </div>
+    </div>
+  </div>]]></template>
+    </sp_header_footer>
+</record_update>

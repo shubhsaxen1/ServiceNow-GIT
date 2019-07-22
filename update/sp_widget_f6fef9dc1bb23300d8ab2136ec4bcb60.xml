@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function ($scope, spUtil) {
+
+	
+
+	var c = this;
+	
+	
+	$scope.user = {
+		displayValue: $scope.data.user_dv,
+		value: $scope.data.user_v,
+		name: 'user'
+	};
+
+	$scope.company = {
+		displayValue: $scope.data.sys_choice_dv,
+		value: $scope.data.sys_choice_v,
+		name: 'company'
+	};
+	
+	$scope.type = {
+		displayValue: $scope.data.type_label,
+		value: $scope.data.type_sys_id,
+		name: 'type'
+	};
+	
+
+	$scope.service = {
+		displayValue: $scope.data.type_service_name,
+		value: $scope.data.type_service_name,
+		name: 'service'
+	};
+	$scope.subservice = {
+		displayValue: $scope.data.type_kot,
+		value: $scope.data.type_kot,
+		name: 'subservice'
+	};
+
+	
+	$scope.$on('record.updated', function(name, data) {
+
+       spUtil.update($scope);
+
+   });
+
+	$scope.$on("field.change", function(evt, parms) {
+	
+		// Application is selected, set the cmdb_ci_filter
+		if (parms.field.name == 'user'){
+		   
+		   // alert('parms.newValue:' + parms.newValue);
+		   // if application selected is not blank, set the cmdb_ci_filter 
+		   	if(parms.newValue != ''){
+			
+				c.data.Setuser = parms.newValue;
+				c.data.action = "user_selected";
+				
+				// call server function
+				c.server.update().then(function(){
+					// clear the action
+					c.data.action = undefined;
+				});
+				
+				// Clear all values on HTML form
+				//$scope.cmdb_ci = {displayValue: '',value: '',name: 'cmdb_ci'};
+				$scope.service = {displayValue: '',value: '',name: 'service'};
+				c.data.template.href = '';
+				c.data.catalog_item_link_name = '';
+				
+			// Clear all Values
+			} else {
+				//$scope.cmdb_ci = {displayValue: '',value: '',name: 'cmdb_ci'};
+				$scope.service = {displayValue: '',value: '',name: 'service'};
+				c.data.cmdb_ci_query = 'sys_idISEMPTY';
+				c.subservice_selected ='sys_idISEMPTY';
+				c.data.template.href = '';
+				c.data.catalog_item_link_name = '';
+			}
+		}
+		
+		// CMDB CI is selected, set the catalog_item_filter
+		if (parms.field.name == 'type'){
+		
+			// alert('parms.newValue:' + parms.newValue);
+			// if cmdb_ci selected is not blank, set the catalog_item_filter 
+			if(parms.newValue != ''){
+		
+				c.data.SetType = parms.newValue;
+				c.data.action = "type_selected";
+		
+				// call server function
+				c.server.update().then(function(){
+					// clear the action
+					c.data.action = undefined;
+				});
+				
+				//console.log(c.data.SetConfigurationItem);
+				// Clear catalog_item on HTML form
+				$scope.service = {displayValue: '',value: '',name: 'service'};
+				c.data.template.href = '';
+				c.data.catalog_item_link_name = '';
+			
+			} else {
+			
+				// Clear Catalog Item
+				$scope.service = {displayValue: '',value: '',name: 'service'};
+				c.service_query ='sys_idISEMPTY';
+				c.data.template.href = '';
+				c.data.catalog_item_link_name = '';
+			}
+		}
+		
+		
+			if (parms.field.name == 'service'){
+		
+			// alert('parms.newValue:' + parms.newValue);
+			// if cmdb_ci selected is not blank, set the catalog_item_filter 
+			if(parms.newValue != ''){
+		
+				c.data.SetService = parms.newValue;
+				c.data.action = "service_selected";
+		
+				// call server function
+				c.server.update().then(function(){
+					// clear the action
+					c.data.action = undefined;
+				});
+				
+				//console.log(c.data.SetConfigurationItem);
+				// Clear catalog_item on HTML form
+				//$scope.subservice = {displayValue: '',value: '',name: 'service'};
+				c.data.template.href = '';
+				c.data.catalog_item_link_name = '';
+			
+			} else {
+			
+				// Clear Catalog Item
+				//$scope.subservice = {displayValue: '',value: '',name: 'service'};
+				c.subservice_query ='sys_idISEMPTY';
+				c.data.template.href = '';
+				c.data.catalog_item_link_name = '';
+			}
+		}
+		
+		
+			if (parms.field.name == 'subservice'){
+		
+			// alert('parms.newValue:' + parms.newValue);
+			// if cmdb_ci selected is not blank, set the catalog_item_filter 
+			if(parms.newValue != ''){
+		
+				c.data.SetSubService = parms.newValue;
+				//alert("table"+parms.newValue);
+				c.data.action = "subservice_selected";
+		
+				// call server function
+				c.server.update().then(function(){
+					// clear the action
+					c.data.action = undefined;
+				});
+				
+				
+			
+			} 
+		}
+	
+
+	
+});
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.panel {&#13;
+ 		margin-bottom: 0; &#13;
+}&#13;
+&#13;
+.h6 {color:#428bca}&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>ticket_selector_scoped</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Ticket Selector Scoped</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+	// Set default URL
+	data.template = 'https://dev74786.service-now.com/sp';
+	data.sys_choice_dv = "India";
+	data.sys_choice_v = "India";
+	data.user_v =gs.getUser().getName()
+	data.user_dv = gs.getUser().getName();
+	
+	//console.log("name"+g_user.firstName);
+	
+	//if (input.action == undefined){
+			// Set default query
+			
+	//data.user_query = 'nameSTARTSWITHabel';
+	data.type_query = 'nameSTARTSWITHx_380489_git_porta_msp_service_kot^element=request_type';
+	data.cmdb_ci_query = 'sys_idISEMPTY';
+	data.catalog_item_query ='sys_idISEMPTY';
+	//data.service_query='request_type=query'
+	//data.sys_choice_query ='name=u_application_catalog_item^inactive=false';	
+	//}
+	var serviceHelper = new x_380489_git_porta.GIT_Service_Helper();
+	serviceHelper.initialize();
+	
+	if (input) {
+		
+	
+		// if input_filter = cmdb_ci_filter
+		if (input.action == "user_selected") {
+		
+			// if input.SetApplication is not empty 
+			if (input.Setuser != '') {
+				// Set Filter
+				//console.log("sydID"+input.SetApplication);
+				//var gr=new GlideRecord('cmdb_ci_appl');
+				//gr.get(input.SetApplication);
+				//var newName=gr.getDisplayValue('name');
+				
+				//console.log("name"+newName);
+				//data.cmdb_ci_query = 'u_application=' + input.SetApplication;
+				//u_application=3a6cc784c0a8ce01009df43d8f23100d
+			
+			} else {
+				// Else Clear cmdb_ci and catalot_item Filters
+				data.cmdb_ci_query = 'sys_idISEMPTY';
+				data.catalog_item_query ='sys_idISEMPTY';
+				data.service_query='sys_idISEMPTY'
+				
+			}
+		}
+ 
+		if (input.action == "type_selected") {
+			//data.cmdb_ci_query = 'u_application=80a187e74f032300709ab63ca310c7f6';
+			data.catalog_item_query = input.SetType;
+			console.log(input.SetType);
+			var gr = new GlideRecord('sys_choice'); 
+			gr.get(input.SetType);
+			var d=gr.label;
+			
+			console.log("hello"+d);
+			
+			
+			data.service_query=serviceHelper.getService(d);
+			 //console.log("IDS"+serviceHelper.getService(d));
+			//cons
+			
+			
+			
+			//data.service_query = 'request_type='+d;
+			
+			//lookup ci class
+					
+			// filter catalog items,
+			//var gr1 = new GlideRecord('x_380489_git_porta_msp_service_kot'); 
+			//gr1.addQuery('request_type',d);
+			//gr1.query(); 
+			//if (gr1.next()) {
+				//console.log
+					//data.sysID = gr.u_catalog_item.sys_id;
+		//data.sysID = "TEN";
+				//var sysClassName = gr1.sys_class_name;
+				//var cmdbciname = gr1.name.toString();
+		//data.catalog_item_link_name = sysClassName + 'a:' + cmdbciname;
+			//}
+			//data.catalog_item_query = cmdbciname + sysClassName + input.SetApplication + ':' + input.SetConfigurationItem;
+			//cmdbClassName =  sysClassName; 
+			//Application = input.SetApplication;
+			//var cmdb_ci = input.SetConfigurationItem;
+			
+			//data.catalog_item_query = getCatalogItems(cmdbClassName,Application);
+		}
+ 
+		if(input.action == 'service_selected'){
+				//data.catalog_item_link_name = 'blank';
+			
+			
+			data.subservice_query='service_name='+input.SetService;
+			
+		
+			//data.cmdb_ci_query = 'u_application=80a187e74f032300709ab63ca310c7f6';
+		//	data.cmdb_ci_query = 'u_application=' + input.SetApplication;
+				//var rec = new GlideRecord('sc_cat_item');
+				//rec.addQuery('sys_id',input.selectedCatalogItem);
+				//rec.addQuery('u_application',Application);
+				//rec.query();
+				//if (rec.next()) {
+		//	if ($sp.canReadRecord(rec)){
+					//cmdb_ci_name = rec.name;
+					
+//				//data.template_href = "https://dev74786.service-now.com/sp?id=sc_cat_item&sys_id=" + input.selectedCatalogItem;
+			//data.catalog_item_link_name = 'Launch: ' + cmdb_ci_name.toString();
+				//}
+		}
+		
+		if(input.action == 'subservice_selected'){
+				//data.catalog_item_link_name = 'blank';
+			
+			
+			//data.subservice_query='service_name='+input.SetService;
+			console.log("sys Id service"+input.SetSubService);
+		
+			//data.cmdb_ci_query = 'u_application=80a187e74f032300709ab63ca310c7f6';
+		//	data.cmdb_ci_query = 'u_application=' + input.SetApplication;
+				//var rec = new GlideRecord('sc_cat_item');
+				//rec.addQuery('sys_id',input.selectedCatalogItem);
+				//rec.addQuery('u_application',Application);
+				//rec.query();
+				//if (rec.next()) {
+		//	if ($sp.canReadRecord(rec)){
+					//cmdb_ci_name = rec.name;
+					
+//				//data.template_href = "https://dev74786.service-now.com/sp?id=sc_cat_item&sys_id=" + input.selectedCatalogItem;
+			//data.catalog_item_link_name = 'Launch: ' + cmdb_ci_name.toString();
+				//}
+		}
+		
+		
+	}	
+	
+	
+	
+})();
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-18 11:33:15</sys_created_on>
+        <sys_id>f6fef9dc1bb23300d8ab2136ec4bcb60</sys_id>
+        <sys_mod_count>80</sys_mod_count>
+        <sys_name>Ticket Selector Scoped</sys_name>
+        <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_update_name>sp_widget_f6fef9dc1bb23300d8ab2136ec4bcb60</sys_update_name>
+        <sys_updated_by>Shubham</sys_updated_by>
+        <sys_updated_on>2019-07-20 06:59:04</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default" >
+<div class="modal-body">
+
+
+<label class="m-n">End User</label>
+<sn-record-picker sn-disabled="true" field="user" display-field="'name'" value-field="'sys_id'" 
+                  search-fields="'name'" page-size="100" default-query="data.user_query">
+</sn-record-picker>
+  
+<label class="m-n">Organisation</label>
+<sn-record-picker sn-disabled="true" table="'core_company'" field="company" display-field="'label'" value-field="'value'" 
+                  search-fields="'label'" page-size="100" default-query="data.company_query">
+</sn-record-picker>
+  
+  
+<label class="m-n">Ticket Type</label>
+<sn-record-picker table="'sys_choice'" field="type" display-field="'label'" value-field="'sys_id'" 
+                  search-fields="'name'" page-size="100" default-query="data.type_query">
+</sn-record-picker>
+  
+  <label class="m-n">Please select a service:</label>
+<sn-record-picker table="'x_380489_git_porta_service'" field="service" display-field="'service_name'" value-field="'service_name'" 
+                  search-fields="'name'" page-size="100" default-query="data.service_query">
+</sn-record-picker>
+  
+
+<label class="m-n">Sub Service</label>
+<sn-record-picker table="'x_380489_git_porta_msp_service_kot'" field="subservice" display-field="'kot'" value-field="'kot'" 
+                  search-fields="'name'" page-size="100"  default-query="data.subservice_query">
+</sn-record-picker>
+  
+<label class="m-n">Short Description</label><br>
+  <textarea class="form-control" ng-model="short_desc" rows="1"></textarea><br>
+  <textarea class="form-control" ng-model="desc" placeholder="Enter description" rows="5"></textarea>
+
+</div>
+<div class="modal-footer" ng-if="data.catalog_item_link_name.length > 0" >
+<a class="btn btn-primary" ng-href="{{data.template_href}}">{{data.catalog_item_link_name}}</a>
+</div>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

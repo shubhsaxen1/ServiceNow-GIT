@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="order" label="Order" language="en" table="x_380489_git_porta_msp_service_kot">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>order</element>
+            <help/>
+            <hint/>
+            <label>Order</label>
+            <language>en</language>
+            <name>x_380489_git_porta_msp_service_kot</name>
+            <plural>Orders</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>shubham</sys_created_by>
+            <sys_created_on>2019-07-19 07:52:39</sys_created_on>
+            <sys_id>111616641bfe3300d8ab2136ec4bcbf4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Order</sys_name>
+            <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+            <sys_update_name>sys_documentation_x_380489_git_porta_msp_service_kot_order_en</sys_update_name>
+            <sys_updated_by>shubham</sys_updated_by>
+            <sys_updated_on>2019-07-19 07:52:39</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

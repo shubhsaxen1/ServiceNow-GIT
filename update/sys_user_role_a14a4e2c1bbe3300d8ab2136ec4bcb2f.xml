@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_380489_git_porta.msp_service_kot_user</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>msp_service_kot_user</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>shubham</sys_created_by>
+        <sys_created_on>2019-07-19 07:01:04</sys_created_on>
+        <sys_id>a14a4e2c1bbe3300d8ab2136ec4bcb2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_380489_git_porta.msp_service_kot_user</sys_name>
+        <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_update_name>sys_user_role_a14a4e2c1bbe3300d8ab2136ec4bcb2f</sys_update_name>
+        <sys_updated_by>shubham</sys_updated_by>
+        <sys_updated_on>2019-07-19 07:01:04</sys_updated_on>
+    </sys_user_role>
+</record_update>

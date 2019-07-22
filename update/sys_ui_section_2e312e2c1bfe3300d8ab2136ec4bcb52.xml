@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="2e312e2c1bfe3300d8ab2136ec4bcb52" sys_domain="global" table="x_380489_git_porta_msp_service_kot" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>shubham</sys_created_by>
+            <sys_created_on>2019-07-19 08:41:22</sys_created_on>
+            <sys_id>ba312e2c1bfe3300d8ab2136ec4bcb59</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_380489_git_porta_msp_service_kot" sys_domain="global" view="Default view">2e312e2c1bfe3300d8ab2136ec4bcb52</sys_ui_section>
+            <sys_updated_by>shubham</sys_updated_by>
+            <sys_updated_on>2019-07-19 08:41:22</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>request_type</element>
+            <position>1</position>
+            <sys_created_by>shubham</sys_created_by>
+            <sys_created_on>2019-07-19 08:41:22</sys_created_on>
+            <sys_id>b6312e2c1bfe3300d8ab2136ec4bcb5a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_380489_git_porta_msp_service_kot" sys_domain="global" view="Default view">2e312e2c1bfe3300d8ab2136ec4bcb52</sys_ui_section>
+            <sys_updated_by>shubham</sys_updated_by>
+            <sys_updated_on>2019-07-19 08:41:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>service_name</element>
+            <position>2</position>
+            <sys_created_by>shubham</sys_created_by>
+            <sys_created_on>2019-07-19 08:41:22</sys_created_on>
+            <sys_id>3e312e2c1bfe3300d8ab2136ec4bcb5a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_380489_git_porta_msp_service_kot" sys_domain="global" view="Default view">2e312e2c1bfe3300d8ab2136ec4bcb52</sys_ui_section>
+            <sys_updated_by>shubham</sys_updated_by>
+            <sys_updated_on>2019-07-19 08:41:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kot</element>
+            <position>3</position>
+            <sys_created_by>shubham</sys_created_by>
+            <sys_created_on>2019-07-19 08:41:22</sys_created_on>
+            <sys_id>b2312e2c1bfe3300d8ab2136ec4bcb5b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_380489_git_porta_msp_service_kot" sys_domain="global" view="Default view">2e312e2c1bfe3300d8ab2136ec4bcb52</sys_ui_section>
+            <sys_updated_by>shubham</sys_updated_by>
+            <sys_updated_on>2019-07-19 08:41:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>shubham</sys_created_by>
+            <sys_created_on>2019-07-19 08:41:22</sys_created_on>
+            <sys_id>3a312e2c1bfe3300d8ab2136ec4bcb5b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_380489_git_porta_msp_service_kot" sys_domain="global" view="Default view">2e312e2c1bfe3300d8ab2136ec4bcb52</sys_ui_section>
+            <sys_updated_by>shubham</sys_updated_by>
+            <sys_updated_on>2019-07-19 08:41:22</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kot_description</element>
+            <position>5</position>
+            <sys_created_by>shubham</sys_created_by>
+            <sys_created_on>2019-07-19 08:41:22</sys_created_on>
+            <sys_id>be312e2c1bfe3300d8ab2136ec4bcb5b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_380489_git_porta_msp_service_kot" sys_domain="global" view="Default view">2e312e2c1bfe3300d8ab2136ec4bcb52</sys_ui_section>
+            <sys_updated_by>shubham</sys_updated_by>
+            <sys_updated_on>2019-07-19 08:41:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>service_description</element>
+            <position>6</position>
+            <sys_created_by>shubham</sys_created_by>
+            <sys_created_on>2019-07-19 08:41:22</sys_created_on>
+            <sys_id>36312e2c1bfe3300d8ab2136ec4bcb5c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_380489_git_porta_msp_service_kot" sys_domain="global" view="Default view">2e312e2c1bfe3300d8ab2136ec4bcb52</sys_ui_section>
+            <sys_updated_by>shubham</sys_updated_by>
+            <sys_updated_on>2019-07-19 08:41:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>order</element>
+            <position>7</position>
+            <sys_created_by>shubham</sys_created_by>
+            <sys_created_on>2019-07-19 08:41:22</sys_created_on>
+            <sys_id>ba312e2c1bfe3300d8ab2136ec4bcb5c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_380489_git_porta_msp_service_kot" sys_domain="global" view="Default view">2e312e2c1bfe3300d8ab2136ec4bcb52</sys_ui_section>
+            <sys_updated_by>shubham</sys_updated_by>
+            <sys_updated_on>2019-07-19 08:41:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>8</position>
+            <sys_created_by>shubham</sys_created_by>
+            <sys_created_on>2019-07-19 08:41:22</sys_created_on>
+            <sys_id>32312e2c1bfe3300d8ab2136ec4bcb5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_380489_git_porta_msp_service_kot" sys_domain="global" view="Default view">2e312e2c1bfe3300d8ab2136ec4bcb52</sys_ui_section>
+            <sys_updated_by>shubham</sys_updated_by>
+            <sys_updated_on>2019-07-19 08:41:22</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>service</element>
+            <position>9</position>
+            <sys_created_by>Shubham</sys_created_by>
+            <sys_created_on>2019-07-19 13:45:33</sys_created_on>
+            <sys_id>22d6632c1bb27300d8ab2136ec4bcbf3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_380489_git_porta_msp_service_kot" sys_domain="global" view="Default view">2e312e2c1bfe3300d8ab2136ec4bcb52</sys_ui_section>
+            <sys_updated_by>Shubham</sys_updated_by>
+            <sys_updated_on>2019-07-19 13:45:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_380489_git_porta_msp_service_kot</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>shubham</sys_created_by>
+            <sys_created_on>2019-07-19 08:41:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2e312e2c1bfe3300d8ab2136ec4bcb52</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_380489_git_porta_msp_service_kot</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+            <sys_update_name>sys_ui_section_2e312e2c1bfe3300d8ab2136ec4bcb52</sys_update_name>
+            <sys_updated_by>shubham</sys_updated_by>
+            <sys_updated_on>2019-07-19 08:41:21</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>
