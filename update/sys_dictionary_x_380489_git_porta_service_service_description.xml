@@ -53,15 +53,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>Shubham</sys_created_by>
         <sys_created_on>2019-07-19 13:44:33</sys_created_on>
-        <sys_id>d0c889e5db3ef3008a286dda4b961976</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_id>6eeea5f11ba37f006c3a4222dd4bcbb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Service Description</sys_name>
         <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
         <sys_policy/>
         <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
         <sys_update_name>sys_dictionary_x_380489_git_porta_service_service_description</sys_update_name>
-        <sys_updated_by>A626579</sys_updated_by>
-        <sys_updated_on>2019-07-24 13:26:22</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-08-29 09:01:04</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

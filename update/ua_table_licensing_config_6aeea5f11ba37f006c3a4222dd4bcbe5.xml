@@ -4,22 +4,22 @@
         <license_condition/>
         <license_model>none</license_model>
         <license_roles/>
-        <name>x_380489_git_porta_service</name>
+        <name>x_380489_git_porta_msp_service_kot</name>
         <op_delete>true</op_delete>
         <op_insert>true</op_insert>
         <op_update>true</op_update>
         <owner_condition/>
         <sys_class_name>ua_table_licensing_config</sys_class_name>
-        <sys_created_by>Shubham</sys_created_by>
-        <sys_created_on>2019-07-19 13:43:08</sys_created_on>
-        <sys_id>d8c889e5db3ef3008a286dda4b961981</sys_id>
+        <sys_created_by>shubham</sys_created_by>
+        <sys_created_on>2019-07-19 07:01:05</sys_created_on>
+        <sys_id>6aeea5f11ba37f006c3a4222dd4bcbe5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_380489_git_porta_service</sys_name>
+        <sys_name>x_380489_git_porta_msp_service_kot</sys_name>
         <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
         <sys_policy/>
         <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
-        <sys_update_name>ua_table_licensing_config_d8c889e5db3ef3008a286dda4b961981</sys_update_name>
-        <sys_updated_by>Shubham</sys_updated_by>
-        <sys_updated_on>2019-07-19 13:43:08</sys_updated_on>
+        <sys_update_name>ua_table_licensing_config_6aeea5f11ba37f006c3a4222dd4bcbe5</sys_update_name>
+        <sys_updated_by>shubham</sys_updated_by>
+        <sys_updated_on>2019-07-19 07:01:05</sys_updated_on>
     </ua_table_licensing_config>
 </record_update>

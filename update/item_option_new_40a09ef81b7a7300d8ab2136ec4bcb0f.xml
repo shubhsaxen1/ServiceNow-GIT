@@ -48,7 +48,7 @@
         <record_producer_table>task</record_producer_table>
         <reference>x_380489_git_porta_msp_service_kot</reference>
         <reference_qual>javascript : "service=" + current.variables.service;</reference_qual>
-        <reference_qual_condition table="x_380489_git_porta_msp_service_kot">service=2c48ab2c1bb27300d8ab2136ec4bcb0c^EQ<item display_table="x_380489_git_porta_service" display_value="Nessie Upgrade" endquery="false" field="service" goto="false" newquery="false" operator="=" or="false" value="2c48ab2c1bb27300d8ab2136ec4bcb0c"/>
+        <reference_qual_condition table="x_380489_git_porta_msp_service_kot">service=2c48ab2c1bb27300d8ab2136ec4bcb0c^EQ<item endquery="false" field="service" goto="false" newquery="false" operator="=" or="false" value="2c48ab2c1bb27300d8ab2136ec4bcb0c"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </reference_qual_condition>
         <scale_max>5</scale_max>
