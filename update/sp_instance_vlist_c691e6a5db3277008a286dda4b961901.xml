@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field>short_description</display_field>
+        <field_list/>
+        <filter table="change_request">active=true^opened_by=9365c614db7e33008a286dda4b96190a^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item display_table="sys_user" display_value="Kunal Shiradkar" endquery="false" field="opened_by" goto="false" newquery="false" operator="=" or="false" value="9365c614db7e33008a286dda4b96190a"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>20</maximum_entries>
+        <order>2</order>
+        <order_by>sys_updated_on</order_by>
+        <order_direction>desc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="3">7c745a69dbfe37008a286dda4b961992</sp_column>
+        <sp_page display_value="ticket">84af292247132100ba13a5554ee4909e</sp_page>
+        <sp_widget display_value=" Simple List GIT">d9c32229db3277008a286dda4b96193e</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>A705529</sys_created_by>
+        <sys_created_on>2019-07-22 11:16:53</sys_created_on>
+        <sys_id>c691e6a5db3277008a286dda4b961901</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>My Open Changes</sys_name>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_update_name>sp_instance_vlist_c691e6a5db3277008a286dda4b961901</sys_update_name>
+        <sys_updated_by>A705529</sys_updated_by>
+        <sys_updated_on>2019-07-22 11:27:58</sys_updated_on>
+        <table>change_request</table>
+        <title>My Open Changes</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"always_show": {
+		"displayValue": false,
+		"value": false
+	},
+	"image_field": {
+		"value": null,
+		"displayValue": ""
+	},
+	"secondary_fields": {
+		"value": "number,sys_updated_on",
+		"displayValue": "number,sys_updated_on"
+	},
+	"panel_body_height": {
+		"value": null,
+		"displayValue": ""
+	},
+	"rounded_images": {
+		"displayValue": true,
+		"value": true
+	}
+}]]></widget_parameters>
+    </sp_instance_vlist>
+    <sys_translated_text action="delete_multiple" query="documentkey=c691e6a5db3277008a286dda4b961901"/>
+</record_update>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">93d1ae3a1b0bb3006c3a4222dd4bcb59</sp_column>
+        <sp_widget display_value="GIT breadcrumbs">4fdf1b971b4337006c3a4222dd4bcb99</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>A762682</sys_created_by>
+        <sys_created_on>2019-08-08 06:48:46</sys_created_on>
+        <sys_id>e44709c3db07f300d9ba40a50596196d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_update_name>sp_instance_e44709c3db07f300d9ba40a50596196d</sys_update_name>
+        <sys_updated_by>A762682</sys_updated_by>
+        <sys_updated_on>2019-08-20 08:55:16</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=e44709c3db07f300d9ba40a50596196d"/>
+</record_update>

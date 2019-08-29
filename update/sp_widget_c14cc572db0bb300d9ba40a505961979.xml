@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, spUtil, $rootScope) {
+    var c = this;
+    //Load customer config from rootScope
+	bc=[];
+	bc.push({label: $scope.data.prevCatParent, url: '?id=git_services&sys_id='  + $scope.data.prevCatParentId});
+	bc.push({label: $scope.data.prevCat, url: '?id=git_servicelevel_2&sys_id='  + $scope.data.prevCatId});
+	bc.push({label:$scope.data.title,url:'?id=git_servicelevel_3&sys_id='+$scope.data.category_sys_id});
+	$rootScope.$broadcast('sp.update.breadcrumbs',bc);
+    c.cc = $rootScope.customerConfig;
+
+  c.redirect=function (link){
+  		window.location.href=location.pathname+"?id=git_category&sys_id="+link;
+			    
+ };
+	
+	
+		//The searchItem is the part that handle the dynamic search while typing.
+  $('#searchItem').on('input',function(ev){
+    c.textSearch(ev.target.value);
+  });
+
+  c.textSearch = function (str) {
+    $.each($('.app-name'), function(){
+      if($(this).text().toLowerCase().search(str.toLowerCase())!=-1)
+      $(this).parent().parent().parent().show();
+      else
+      $(this).parent().parent().parent().hide();
+    });
+  };
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.app{&#13;
+  background-color:white;&#13;
+	height:150px;&#13;
+  margin:10px;&#13;
+  padding:5px 0px;&#13;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);&#13;
+  cursor: pointer;&#13;
+ &#13;
+  h3{&#13;
+    height:2.4em;&#13;
+    font-size:1.4em;&#13;
+    overflow:auto;&#13;
+  }&#13;
+  &#13;
+  .fa{&#13;
+  font-size:1.5em;&#13;
+  color:$primary;&#13;
+   margin:0px 3px;&#13;
+  }&#13;
+  &#13;
+  .fa:hover{&#13;
+  transition: font 0.3s ease;&#13;
+  font-size:1.7em;&#13;
+  }&#13;
+  hr{&#13;
+  margin-top:0px;&#13;
+  }&#13;
+  &#13;
+  img {&#13;
+  max-height:50px;&#13;
+  margin:auto;&#13;
+  }&#13;
+  .img-list{&#13;
+ 	max-height:100px;&#13;
+  margin:10px 0px;&#13;
+  }&#13;
+  &#13;
+}&#13;
+&#13;
+.app-name+div{&#13;
+    overflow: auto;&#13;
+    max-height: 140px;&#13;
+}&#13;
+&#13;
+.app:hover{&#13;
+transition: all 0.3s ease;&#13;
+background-color:#f4f8fc;&#13;
+margin-top:5px;  &#13;
+height:155px;  &#13;
+ img {&#13;
+//  transition: all 0.3s ease;&#13;
+//max-height:60px;&#13;
+  }&#13;
+  .img-list{&#13;
+  transition: all 0.2s ease;&#13;
+ 	max-height:120px;&#13;
+  }&#13;
+  &#13;
+}&#13;
+&#13;
+#custom-search-input{&#13;
+    padding: 3px;&#13;
+    border: solid 1px #E4E4E4;&#13;
+    border-radius: 6px;&#13;
+    background-color: #fff;&#13;
+}&#13;
+&#13;
+#custom-search-input input{&#13;
+    border: 0;&#13;
+    box-shadow: none;&#13;
+}&#13;
+&#13;
+#custom-search-input button{&#13;
+    margin: 2px 0 0 0;&#13;
+    background: none;&#13;
+    box-shadow: none;&#13;
+    border: 0;&#13;
+    color: #666666;&#13;
+    padding: 0 8px 0 10px;&#13;
+    border-left: solid 1px #ccc;&#13;
+}&#13;
+&#13;
+#custom-search-input button:hover{&#13;
+    border: 0;&#13;
+    box-shadow: none;&#13;
+    border-left: solid 1px #ccc;&#13;
+}&#13;
+&#13;
+#custom-search-input .glyphicon-search{&#13;
+    font-size: 23px;&#13;
+  &#13;
+.btn-group.a-z .btn {&#13;
+border-radius: 0px;&#13;
+}&#13;
+&#13;
+.panel-attributes {&#13;
+height:30px;&#13;
+padding-right: 10px;&#13;
+}&#13;
+&#13;
+.panel-attributes-item {&#13;
+display: inline-block;&#13;
+  height: 30px;&#13;
+  width: 20px;&#13;
+}&#13;
+  &#13;
+}&#13;
+.panel-body{&#13;
+  overflow-y: auto;&#13;
+  max-height: 160px;&#13;
+  padding:10px;&#13;
+}&#13;
+&#13;
+.fa {&#13;
+    display: inline;&#13;
+    font-size: 18px;    &#13;
+  }&#13;
+&#13;
+.overflow-100 {&#13;
+	height: 200px;&#13;
+  &#13;
+}&#13;
+&#13;
+.all{&#13;
+	width: 2%;&#13;
+}&#13;
+&#13;
+.app-name{&#13;
+  margin:0;&#13;
+  	padding:0;&#13;
+  	font-size: 16px;&#13;
+    word-wrap: break-word;      /* IE 5.5-7 */&#13;
+    white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */&#13;
+}&#13;
+&#13;
+.app-icons{&#13;
+  padding-left:0 !important;&#13;
+  padding-right:0 !important;&#13;
+}&#13;
+&#13;
+.nptn-panel-heading{&#13;
+	padding: 5px 10px;&#13;
+}&#13;
+&#13;
+.nptn-panel-body{&#13;
+  &#13;
+}&#13;
+&#13;
+.applicationsearch{&#13;
+     left: 1%;&#13;
+    width: 50%;&#13;
+    margin-top: 76px&#13;
+}&#13;
+&#13;
+.appsearchbar{&#13;
+height:34px !important;&#13;
+  font-size:14px !important;&#13;
+}&#13;
+.letterpadding{&#13;
+padding-left:8px;&#13;
+}&#13;
+.CategoryDescription{&#13;
+  font-family: "SourceSansPro", Helvetica, Arial, sans-serif;&#13;
+    &#13;
+  &#13;
+}&#13;
+&#13;
+.CategorySubDescription{&#13;
+  font-family: "SourceSansPro", Helvetica, Arial, sans-serif;&#13;
+    font-size: 14px;&#13;
+}&#13;
+#div_hover:hover { background-color: #0066A1 !important; &#13;
+color:white;&#13;
+}&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) { 
+
+ }]]></link>
+        <name>GIT  Sub Service Level 2</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function($sp,input,GlideRecord,data,gs) {
+	//'use strict';
+	var t='';
+	var parentID = $sp.getParameter("sys_id");
+	var sys_id = $sp.getParameter("sys_id");
+	data.category_sys_id=sys_id;
+	var gr=new GlideRecord('sc_category');
+		gr.addQuery('sys_id',sys_id);
+	     gr.addQuery("active",true);
+	gr.query();
+while(gr.next()){
+ t=gr.title;
+	t1=gr.description;
+	t2=gr.getDisplayValue('icon');
+	t3=gr.getDisplayValue('parent');
+	t4=gr.getValue('parent');
+	console.log(t3);
+	
+}
+	
+	data.title=t.toString();
+	data.description=t1.toString();
+	data.icon=t2.toString();
+	data.prevCat=t3.toString();
+	data.prevCatId=t4;
+	data.placeholder = gs.getMessage("Search in "+data.title);
+	
+	
+	
+		var gr=new GlideRecord('sc_category');
+		gr.addQuery('sys_id',t4);
+	     gr.addQuery("active",true);
+	gr.query();
+while(gr.next()){
+ //t5=gr.title;
+	//t6=gr.description;
+	//t2=gr.getDisplayValue('icon');
+	t5=gr.getDisplayValue('parent');
+	t6=gr.getValue('parent');
+	console.log("Final Value"+t5+" "+t6);
+	
+}
+	
+	data.prevCatParent=t5;
+	data.prevCatParentId=t6;
+	
+	//console.log(data.prevCat);
+	//console.log(data.prevCatId);
+	//console.log(data.title);
+	//data.placeholder = gs.getMessage("Search for a Service");
+	
+	//Handle Services part
+	data.subserviceLevelGroup=[];
+	//var app={},
+// 	fields="service_description,service_name,sys_id",
+	fields="description,sys_name,sys_id,icon",
+// 	gr=new GlideRecord('x_380489_git_porta_service');
+// 	//gr.addQuery('u_language.value',gs.getUser().getLanguage())
+// 	//gr.addQuery("u_active", true);
+// 	gr.query();
+// 	while (gr.next()){
+// 		app={};
+// 		app.category = gr.getValue('category');
+		
+// 		//code to check if we have any cat items are present inside the category
+// 		var gr_cat=new GlideRecord('sc_cat_item_category');
+// 		gr_cat.addQuery('sc_category',app.category);
+// 		gr_cat.query();
+// 		if(gr_cat.getRowCount()>0){
+		
+// 		//app.short_description = gr.getDisplayValue('service_description');
+// 			$sp.getRecordDisplayValues(app,gr,fields);
+// 			data.applications.push(app);
+// 			}
+		
+// 	}
+
+	
+gr=new GlideRecord('sc_category');
+gr.addQuery("active", true);
+//gr.addQuery('sc_catalog','e0d08b13c3330100c8b837659bba8fb4');
+gr.addQuery('parent',parentID);
+gr.query();
+while (gr.next()){
+app={};
+app.sys_id=gr.sys_id;
+
+	//var gr_cat=new GlideRecord('sc_cat_item_category');
+	//gr_cat.addQuery('sc_category',app.sys_id);
+	//gr_cat.query();
+	//if(gr_cat.getRowCount()>0){
+		
+// 		//app.short_description = gr.getDisplayValue('service_description');
+	$sp.getRecordDisplayValues(app,gr,fields);
+	data.subserviceLevelGroup.push(app);
+
+	}
+	
+// 	if (input.system_id) {
+// 			console.log("Test title"+input.system_id);
+// 			gr=new GlideRecord('sc_category');
+// 			gr.addQuery("active", true);
+// 	//gr.addQuery('sc_catalog','e0d08b13c3330100c8b837659bba8fb4');
+// 			gr.addQuery('parent',input.system_id);
+// 			gr.query();
+// 			data.count=gr.getRowCount();
+			
+			
+// 		}
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+})($sp,input,GlideRecord,data,gs);]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>A705529</sys_created_by>
+        <sys_created_on>2019-08-07 12:32:10</sys_created_on>
+        <sys_id>c14cc572db0bb300d9ba40a505961979</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name>GIT  Sub Service Level 2</sys_name>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_update_name>sp_widget_c14cc572db0bb300d9ba40a505961979</sys_update_name>
+        <sys_updated_by>A762682</sys_updated_by>
+        <sys_updated_on>2019-08-26 13:50:56</sys_updated_on>
+        <template><![CDATA[<div class="row">
+
+<div>
+<div ng-init="c.initAlphabet()">
+   <div class="row col-md-12">
+     <div class="col-md-6">
+        <div class="panel panel-{{::options.color}} b" style="background:#cce0ec;height:113px;margin-left:-10px">
+        	
+            <img ng-src="{{data.icon}}" class="img-responsive m-r-sm m-b-sm item-image pull-left" />
+        	
+          <h1 class="h4 m-t-none break-word title " aria-label="{{data.category}} ${Category}">{{::data.title}}</h1>
+        	<p class="hidden-xs break-word description" ng-bind-html="data.description">
+			
+          </p>
+         </div>
+      
+      </div>
+     <div class="input-group col-md-6 applicationsearch ">
+    <input id="searchItem" type="text" class="form-control input-lg appsearchbar description" placeholder="{{data.placeholder}}" />
+       
+      <span class="input-group-btn" >
+      <button class="btn btn-default" type="button">
+        <i class="fa fa-search" style="font-size:13px !important"></i>
+      </button>
+    </span>
+  </div>
+  </div>
+
+  <div class="row">
+      <div class="col-sm-6 col-md-3" ng-repeat="app in data.subserviceLevelGroup | filter:c.alphabetModel:c.startsWith | orderBy : 'sys_name'">
+        <div ng-click="c.redirect(app.sys_id);" class="panel panel-default overflow-100" id="div_hover">
+            
+          
+            
+            <div class="panel-body nptn-panel-body">
+               <div class="panel-heading nptn-panel-heading col-md-12">
+            	<h4 class="app-name col-md-11 m-t-xs m-b-xs title">{{app.sys_name}}</h4>
+           </div>
+            	<!--<a href="{{app.u_url_application}}" ng-if= "app.u_url_application" target="_blank">-->
+              <img ng-src="{{app.icon}}" class="img-responsive m-r-sm m-b-sm item-image pull-left" />
+              <!--<span href="{{app.u_url_application}}" ng-if= "app.u_url_application == false" target="_blank">-->
+                <!--<img ng-src="{{app.u_application_icon}}" ng-if="app.u_application_icon" class="img-responsive m-r-sm m-b-sm item-image pull-left" /></span> -->
+              <div class="item-short-desc description" ng-bind-html="::app.description" ng-if="app.description"></div>
+          </div>
+            </div>
+        </div>
+  </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -419,14 +419,14 @@ padding-left: 6.6em;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-07-18 11:41:13</sys_created_on>
         <sys_id>6bc00e101bf23300d8ab2136ec4bcb7e</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>Support Panel Incident Scoped</sys_name>
-        <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
         <sys_policy/>
-        <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
         <sys_update_name>sp_widget_6bc00e101bf23300d8ab2136ec4bcb7e</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-18 21:39:39</sys_updated_on>
+        <sys_updated_by>A705529</sys_updated_by>
+        <sys_updated_on>2019-07-22 09:13:38</sys_updated_on>
         <template><![CDATA[<div class="m-t-sm " ng-class="{'hidden-xs' : hideItemWidget, 'm-l-sm': !isMobile}">
 
   <div >
@@ -468,9 +468,9 @@ padding-left: 6.6em;&#13;
       <div >
       	<div class="col-sm-6 col-md-12" >
         <div class="panel panel-{{::options.color}} b div_hover">
-          <a target="_self" ng-href="https://dev74786.service-now.com/sp?id=sc_cat_selector_git"  class="panel-body block" >
+          <a target="_self" ng-href="https://globalitdev.service-now.com/git?id=sc_cat_selector_git"  class="panel-body block" >
             <div class="overflow-100">
-               <span class="fa fa-5x  item-image pull-left fa-ticket atosIconFont-ssc_online_cep " aria-hidden="true" ></span>
+               <span class="fa fa-5x  item-image pull-left fa-ticket" aria-hidden="true" ></span>
               <h2 class="h4 m-t-none m-b-xs text-overflow-ellipsis"  style="padding:12px;color:#0065A7">${I have an Issue}<span></span></h2>
            
               <div class="text-muted item-short-desc break-word shortdesc">${I have an issueor question. Create an incident or a query ticket}</div>

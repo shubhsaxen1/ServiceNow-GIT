@@ -194,10 +194,12 @@
         <script><![CDATA[(function() {
 
 	// Set default URL
-	data.template = 'https://dev74786.service-now.com/sp';
+	data.template = 'https://globalitdev.service-now.com/git';
 	data.sys_choice_dv = "India";
 	data.sys_choice_v = "India";
-	data.user_v =gs.getUser().getName()
+	data.type_label ="Incident";
+	data.type_sys_id ='incident';
+	data.user_v =gs.getUser().getName();
 	data.user_dv = gs.getUser().getName();
 	
 	//console.log("name"+g_user.firstName);
@@ -206,14 +208,13 @@
 			// Set default query
 			
 	//data.user_query = 'nameSTARTSWITHabel';
-	data.type_query = 'nameSTARTSWITHx_380489_git_porta_msp_service_kot^element=request_type';
-	data.cmdb_ci_query = 'sys_idISEMPTY';
-	data.catalog_item_query ='sys_idISEMPTY';
+	//data.type_query = 'nameSTARTSWITHx_380489_git_porta_msp_service_kot^element=request_type';
+	//data.cmdb_ci_query = 'sys_idISEMPTY';
+	//data.catalog_item_query ='sys_idISEMPTY';
 	//data.service_query='request_type=query'
 	//data.sys_choice_query ='name=u_application_catalog_item^inactive=false';	
 	//}
-	var serviceHelper = new x_380489_git_porta.GIT_Service_Helper();
-	serviceHelper.initialize();
+	
 	
 	if (input) {
 		
@@ -244,16 +245,11 @@
  
 		if (input.action == "type_selected") {
 			//data.cmdb_ci_query = 'u_application=80a187e74f032300709ab63ca310c7f6';
-			data.catalog_item_query = input.SetType;
-			console.log(input.SetType);
-			var gr = new GlideRecord('sys_choice'); 
-			gr.get(input.SetType);
-			var d=gr.label;
+			//data.catalog_item_query = "incident";
+			//console.log(input.SetType);
+			//var gr = new GlideRecord('sys_choice'); 
+			//gr.get(input.SetType);
 			
-			console.log("hello"+d);
-			
-			
-			data.service_query=serviceHelper.getService(d);
 			 //console.log("IDS"+serviceHelper.getService(d));
 			//cons
 			
@@ -285,9 +281,18 @@
  
 		if(input.action == 'service_selected'){
 				//data.catalog_item_link_name = 'blank';
+			var serviceHelper = new x_380489_git_porta.GIT_Service_Helper();
+	serviceHelper.initialize();
+	var d1='incident';
+			var d2='query';
+			
+			//console.log("hello"+d);
 			
 			
-			data.subservice_query='service_name='+input.SetService;
+			data.service_query=serviceHelper.getService(d1,d2);
+			
+			
+			
 			
 		
 			//data.cmdb_ci_query = 'u_application=80a187e74f032300709ab63ca310c7f6';
@@ -307,10 +312,41 @@
 		
 		if(input.action == 'subservice_selected'){
 				//data.catalog_item_link_name = 'blank';
+			data.subservice_query='service_name='+input.SetService;
 			
 			
 			//data.subservice_query='service_name='+input.SetService;
-			console.log("sys Id service"+input.SetSubService);
+			//console.log("sys Id service"+input.SetSubService);
+				var t=input.SetSubService;
+				var gt=new GlideRecord('x_380489_git_porta_msp_service_kot');
+				gt.addQuery('kot',t);
+				gt.query();
+
+				while(gt.next()){
+
+				y2=gt.getValue('request_type');
+				}
+				console.log("subservicename"+y2);
+			
+			data.type_label =y2;
+			data.type_sys_id =y2;
+			
+			
+			//data.type_query='';
+// 			var t=input.SetSubService;
+// var gt=new GlideRecord('sc_cat_item');
+// gt.addQuery('sys_name',t);
+// gt.query();
+
+// while(gt.next()){
+
+// var y=gt.getValue('sys_id');
+// }
+// gs.print(y1);
+			
+
+
+//var id='3dded9addb3237008a286dda4b9619dd';
 		
 			//data.cmdb_ci_query = 'u_application=80a187e74f032300709ab63ca310c7f6';
 		//	data.cmdb_ci_query = 'u_application=' + input.SetApplication;
@@ -340,14 +376,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-07-18 11:33:15</sys_created_on>
         <sys_id>f6fef9dc1bb23300d8ab2136ec4bcb60</sys_id>
-        <sys_mod_count>80</sys_mod_count>
+        <sys_mod_count>89</sys_mod_count>
         <sys_name>Ticket Selector Scoped</sys_name>
-        <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
         <sys_policy/>
-        <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
         <sys_update_name>sp_widget_f6fef9dc1bb23300d8ab2136ec4bcb60</sys_update_name>
-        <sys_updated_by>Shubham</sys_updated_by>
-        <sys_updated_on>2019-07-20 06:59:04</sys_updated_on>
+        <sys_updated_by>A705529</sys_updated_by>
+        <sys_updated_on>2019-07-22 09:57:36</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default" >
 <div class="modal-body">
 

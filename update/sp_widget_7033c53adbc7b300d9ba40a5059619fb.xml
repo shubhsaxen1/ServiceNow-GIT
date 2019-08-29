@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, spUtil, $rootScope) {
+    var c = this;
+    //Load customer config from rootScope
+    c.cc = $rootScope.customerConfig;
+
+  c.redirect=function (link){
+   	c.data.syscat_id = link;
+	  alert(link);
+			c.server.update().then(function(response) {         
+                 $scope.count=parseInt(c.data.count);
+				if($scope.count === 0){
+				window.location.href=location.pathname+"?id=git_category&sys_id="+link;
+				//https://globalitdev.service-now.com/git?id=git_category&sys_id=2360c274db4f7f002528e3474896193f
+		
+			}
+				else{
+					window.location.href=location.pathname+"?id=git_servicelevel_3&sys_id="+link;
+				}
+				
+                });
+  };
+	
+	
+		//The searchItem is the part that handle the dynamic search while typing.
+  $('#searchItem').on('input',function(ev){
+    c.textSearch(ev.target.value);
+  });
+
+  c.textSearch = function (str) {
+    $.each($('.app-name'), function(){
+      if($(this).text().toLowerCase().search(str.toLowerCase())!=-1)
+      $(this).parent().parent().parent().show();
+      else
+      $(this).parent().parent().parent().hide();
+    });
+  };
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.app{&#13;
+  background-color:white;&#13;
+	height:150px;&#13;
+  margin:10px;&#13;
+  padding:5px 0px;&#13;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);&#13;
+  cursor: pointer;&#13;
+ &#13;
+  h3{&#13;
+    height:2.4em;&#13;
+    font-size:1.4em;&#13;
+    overflow:auto;&#13;
+  }&#13;
+  &#13;
+  .fa{&#13;
+  font-size:1.5em;&#13;
+  color:$primary;&#13;
+   margin:0px 3px;&#13;
+  }&#13;
+  &#13;
+  .fa:hover{&#13;
+  transition: font 0.3s ease;&#13;
+  font-size:1.7em;&#13;
+  }&#13;
+  hr{&#13;
+  margin-top:0px;&#13;
+  }&#13;
+  &#13;
+  img {&#13;
+  max-height:50px;&#13;
+  margin:auto;&#13;
+  }&#13;
+  .img-list{&#13;
+ 	max-height:100px;&#13;
+  margin:10px 0px;&#13;
+  }&#13;
+  &#13;
+}&#13;
+&#13;
+.app-name+div{&#13;
+    overflow: auto;&#13;
+    max-height: 140px;&#13;
+}&#13;
+&#13;
+.app:hover{&#13;
+transition: all 0.3s ease;&#13;
+background-color:#f4f8fc;&#13;
+margin-top:5px;  &#13;
+height:155px;  &#13;
+ img {&#13;
+//  transition: all 0.3s ease;&#13;
+//max-height:60px;&#13;
+  }&#13;
+  .img-list{&#13;
+  transition: all 0.2s ease;&#13;
+ 	max-height:120px;&#13;
+  }&#13;
+  &#13;
+}&#13;
+&#13;
+#custom-search-input{&#13;
+    padding: 3px;&#13;
+    border: solid 1px #E4E4E4;&#13;
+    border-radius: 6px;&#13;
+    background-color: #fff;&#13;
+}&#13;
+&#13;
+#custom-search-input input{&#13;
+    border: 0;&#13;
+    box-shadow: none;&#13;
+}&#13;
+&#13;
+#custom-search-input button{&#13;
+    margin: 2px 0 0 0;&#13;
+    background: none;&#13;
+    box-shadow: none;&#13;
+    border: 0;&#13;
+    color: #666666;&#13;
+    padding: 0 8px 0 10px;&#13;
+    border-left: solid 1px #ccc;&#13;
+}&#13;
+&#13;
+#custom-search-input button:hover{&#13;
+    border: 0;&#13;
+    box-shadow: none;&#13;
+    border-left: solid 1px #ccc;&#13;
+}&#13;
+&#13;
+#custom-search-input .glyphicon-search{&#13;
+    font-size: 23px;&#13;
+  &#13;
+.btn-group.a-z .btn {&#13;
+border-radius: 0px;&#13;
+}&#13;
+&#13;
+.panel-attributes {&#13;
+height:30px;&#13;
+padding-right: 10px;&#13;
+}&#13;
+&#13;
+.panel-attributes-item {&#13;
+display: inline-block;&#13;
+  height: 30px;&#13;
+  width: 20px;&#13;
+}&#13;
+  &#13;
+}&#13;
+.panel-body{&#13;
+  overflow-y: auto;&#13;
+  max-height: 160px;&#13;
+  padding:10px;&#13;
+}&#13;
+&#13;
+.fa {&#13;
+    display: inline;&#13;
+    font-size: 18px;    &#13;
+  }&#13;
+&#13;
+.overflow-100 {&#13;
+	height: 200px;&#13;
+  &#13;
+}&#13;
+&#13;
+.all{&#13;
+	width: 2%;&#13;
+}&#13;
+&#13;
+.app-name{&#13;
+  margin:0;&#13;
+  	padding:0;&#13;
+  	font-size: 16px;&#13;
+    word-wrap: break-word;      /* IE 5.5-7 */&#13;
+    white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */&#13;
+}&#13;
+&#13;
+.app-icons{&#13;
+  padding-left:0 !important;&#13;
+  padding-right:0 !important;&#13;
+}&#13;
+&#13;
+.nptn-panel-heading{&#13;
+	padding: 5px 10px;&#13;
+}&#13;
+&#13;
+.nptn-panel-body{&#13;
+  &#13;
+}&#13;
+&#13;
+.applicationsearch{&#13;
+    margin-left: 3px;&#13;
+    left: 49%;&#13;
+    width: 50%;&#13;
+  padding-bottom:15px;&#13;
+}&#13;
+&#13;
+.appsearchbar{&#13;
+height:34px !important;&#13;
+  font-size:14px !important;&#13;
+}&#13;
+.letterpadding{&#13;
+padding-left:8px;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) { 
+
+ }]]></link>
+        <name>GIT  Sub Service Level</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function($sp,input,GlideRecord,data,gs) {
+	//'use strict';
+	
+	var parentID = $sp.getParameter("sys_id");
+	var sys_id = $sp.getParameter("sys_id");
+	var gr=new GlideRecord('sc_category');
+	gr.addQuery('sys_id',$sp.getParameter("sys_id"));
+	gr.query();
+while(gr.next()){
+ t=gr.title;
+	
+}
+	
+	data.title=gr.title;
+	data.placeholder = gs.getMessage("Search in "+data.title);
+	//data.placeholder = gs.getMessage("Search for a Service");
+	
+	//Handle Services part
+	data.subserviceLevelGroup=[];
+	//var app={},
+// 	fields="service_description,service_name,sys_id",
+	fields="description,sys_name,sys_id,icon",
+
+
+	
+gr=new GlideRecord('sc_category');
+gr.addQuery("active", true);
+//gr.addQuery('sc_catalog','e0d08b13c3330100c8b837659bba8fb4');
+gr.addQuery('parent',parentID);
+gr.query();
+while (gr.next()){
+app={};
+app.sys_id=gr.sys_id;
+	
+	$sp.getRecordDisplayValues(app,gr,fields);
+	data.subserviceLevelGroup.push(app);
+
+	}
+	if(input.syscat_id){
+			
+			gr=new GlideRecord('sc_category');
+			gr.addQuery("active", true);
+	//gr.addQuery('sc_catalog','e0d08b13c3330100c8b837659bba8fb4');
+			gr.addQuery('parent',input.syscat_id);
+			gr.query();
+			data.count=gr.getRowCount();
+			
+			
+		}
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+})($sp,input,GlideRecord,data,gs);]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>A705529</sys_created_by>
+        <sys_created_on>2019-08-07 11:52:34</sys_created_on>
+        <sys_id>7033c53adbc7b300d9ba40a5059619fb</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>GIT  Sub Service Level</sys_name>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_update_name>sp_widget_7033c53adbc7b300d9ba40a5059619fb</sys_update_name>
+        <sys_updated_by>A705529</sys_updated_by>
+        <sys_updated_on>2019-08-07 12:51:31</sys_updated_on>
+        <template><![CDATA[<div class="row">
+
+<div>
+<div ng-init="c.initAlphabet()">
+   
+    <div class="input-group col-md-12 applicationsearch">
+    <input id="searchItem" type="text" class="form-control input-lg appsearchbar" placeholder="{{data.placeholder}}" />
+       
+      <span class="input-group-btn" >
+      <button class="btn btn-default" type="button">
+        <i class="fa fa-search" style="font-size:13px !important"></i>
+      </button>
+    </span>
+  </div>
+
+    <div class="row">
+      <div class="col-sm-6 col-md-4" ng-repeat="app in data.subserviceLevelGroup | filter:c.alphabetModel:c.startsWith | orderBy : 'sys_name'">
+        <div class="panel panel-default overflow-100">
+            
+           <div class="panel-heading nptn-panel-heading col-md-12">
+            	<h4 ng-click="c.redirect(app.sys_id);" class="app-name col-md-11 m-t-xs m-b-xs">{{app.sys_name}}</h4>
+           </div>
+            
+            <div class="panel-body nptn-panel-body">
+            	<!--<a href="{{app.u_url_application}}" ng-if= "app.u_url_application" target="_blank">-->
+              <img ng-src="{{app.icon}}" class="img-responsive m-r-sm m-b-sm item-image pull-left" />
+              <!--<span href="{{app.u_url_application}}" ng-if= "app.u_url_application == false" target="_blank">-->
+                <!--<img ng-src="{{app.u_application_icon}}" ng-if="app.u_application_icon" class="img-responsive m-r-sm m-b-sm item-image pull-left" /></span> -->
+              <div class="text-muted item-short-desc" align="justify" ng-bind-html="::app.description" ng-if="app.description"></div>
+          </div>
+            </div>
+        </div>
+  </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

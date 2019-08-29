@@ -7,19 +7,11 @@
 &#13;
 @font-face {&#13;
 &#13;
-     font-family: 'iconfont';&#13;
+     font-family: 'atosIconFont';&#13;
 &#13;
-     src:url('/sys_attachment.do?sys_id=5f00c0a81b3a3300d8ab2136ec4bcbac');&#13;
+   /*  src:url('/sys_attachment.do?sys_id=df5380ec1b3a3300d8ab2136ec4bcbb7') format('embedded-opentype'),*/&#13;
 &#13;
-     src:url('/sys_attachment.do?sys_id=df5380ec1b3a3300d8ab2136ec4bcbb7') format('embedded-opentype'),&#13;
-&#13;
-         url('/sys_attachment.do?sys_id=146380ec1b3a3300d8ab2136ec4bcbba') format('woff'),&#13;
-&#13;
-         url('/sys_attachment.do?sys_id=086380ec1b3a3300d8ab2136ec4bcbb9') format('truetype'),&#13;
-&#13;
-         url('/sys_attachment.do?sys_id=5f00c0a81b3a3300d8ab2136ec4bcbac') format('svg');&#13;
-  &#13;
-  &#13;
+        /*src: url('/sys_attachment.do?sys_id=4b01266edbdff300d9ba40a505961984') format('woff');*/&#13;
 &#13;
      font-weight: normal;&#13;
 &#13;
@@ -30,9 +22,10 @@
 &#13;
 /* MyAtos ICONFONT */&#13;
 &#13;
+&#13;
 .atosIconFont {&#13;
   /* use !important to prevent issues with browser extensions that change fonts */&#13;
-  font-family: 'iconfont' !important;&#13;
+  font-family: 'atosIconFont' !important;&#13;
   speak: none;&#13;
   font-style: normal;&#13;
   font-weight: normal;&#13;
@@ -1168,13 +1161,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-07-18 20:05:32</sys_created_on>
         <sys_id>7e24ff501b3a3300d8ab2136ec4bcb72</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>Atos Icon</sys_name>
-        <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
         <sys_policy/>
-        <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
         <sys_update_name>sp_css_7e24ff501b3a3300d8ab2136ec4bcb72</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-18 21:42:10</sys_updated_on>
+        <sys_updated_by>A762682</sys_updated_by>
+        <sys_updated_on>2019-08-21 06:52:24</sys_updated_on>
     </sp_css>
 </record_update>

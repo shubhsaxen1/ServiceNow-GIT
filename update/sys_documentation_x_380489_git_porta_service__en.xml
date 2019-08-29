@@ -11,12 +11,12 @@
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>Shubham</sys_created_by>
             <sys_created_on>2019-07-19 13:43:08</sys_created_on>
-            <sys_id>1f46abe81bb27300d8ab2136ec4bcb61</sys_id>
+            <sys_id>14c889e5db3ef3008a286dda4b961973</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Service</sys_name>
-            <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+            <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
             <sys_policy/>
-            <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+            <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
             <sys_update_name>sys_documentation_x_380489_git_porta_service__en</sys_update_name>
             <sys_updated_by>Shubham</sys_updated_by>
             <sys_updated_on>2019-07-19 13:43:08</sys_updated_on>

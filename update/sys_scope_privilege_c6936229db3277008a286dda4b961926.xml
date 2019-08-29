@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>read</operation>
+        <source_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>A705529</sys_created_by>
+        <sys_created_on>2019-07-22 11:25:37</sys_created_on>
+        <sys_id>c6936229db3277008a286dda4b961926</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>change_request</sys_name>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_update_name>sys_scope_privilege_c6936229db3277008a286dda4b961926</sys_update_name>
+        <sys_updated_by>A705529</sys_updated_by>
+        <sys_updated_on>2019-07-22 11:25:37</sys_updated_on>
+        <target_name>change_request</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+</record_update>

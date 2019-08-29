@@ -61,9 +61,9 @@
         <sys_id>cd3812b01bba7300d8ab2136ec4bcb3e</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>Description</sys_name>
-        <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
         <sys_policy/>
-        <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
         <sys_update_name>item_option_new_cd3812b01bba7300d8ab2136ec4bcb3e</sys_update_name>
         <sys_updated_by>Vikas</sys_updated_by>
         <sys_updated_on>2019-07-20 02:42:21</sys_updated_on>

@@ -419,14 +419,14 @@ padding-left: 6.6em;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-07-18 11:38:28</sys_created_on>
         <sys_id>9b208e101bf23300d8ab2136ec4bcb72</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>Support Panel Request Scoped</sys_name>
-        <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
         <sys_policy/>
-        <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
         <sys_update_name>sp_widget_9b208e101bf23300d8ab2136ec4bcb72</sys_update_name>
-        <sys_updated_by>Vikas</sys_updated_by>
-        <sys_updated_on>2019-07-20 03:31:36</sys_updated_on>
+        <sys_updated_by>A705529</sys_updated_by>
+        <sys_updated_on>2019-07-22 09:13:17</sys_updated_on>
         <template><![CDATA[<div class="m-t-sm " ng-class="{'hidden-xs' : hideItemWidget, 'm-l-sm': !isMobile}">
 
   <div >
@@ -471,7 +471,7 @@ padding-left: 6.6em;&#13;
           
 
           
-          <a target="_self" ng-href="https://dev74786.service-now.com/sp?id=sc_cat_item&sys_id=43de4e781b7a7300d8ab2136ec4bcb6b"  class="panel-body block" sn-focus="{{::item.highlight}}">
+          <a target="_blank" ng-href="https://globalitdev.service-now.com/git?id=sc_cat_item&sys_id=43de4e781b7a7300d8ab2136ec4bcb6b"  class="panel-body block" sn-focus="{{::item.highlight}}">
             <div class="overflow-100">
               <i class="fa fa-5x fa-ticket m-r-sm m-b-m item-image pull-left" aria-hidden="true" ></i>
               <h2 class="h4 m-t-none m-b-xs text-overflow-ellipsis" style="padding:12px;color:#0065A7">${I want to raise a change/service request}<span></span></h2>

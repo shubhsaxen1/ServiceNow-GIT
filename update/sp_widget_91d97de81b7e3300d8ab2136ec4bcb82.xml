@@ -12,9 +12,18 @@
         <css>.sp-tagline-color {&#13;
 	color: $sp-tagline-color;&#13;
 }&#13;
-.wrapper-xl{&#13;
-padding: 42px !important;&#13;
-}</css>
+&#13;
+&#13;
+.headline{&#13;
+margin-top: -105px !important;&#13;
+padding-bottom: 40px !important;&#13;
+&#13;
+}&#13;
+&#13;
+.text-3x {&#13;
+    font-size: 2.5em !important;&#13;
+}&#13;
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -38,17 +47,17 @@ data.user=gs.getUserName();
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-07-19 05:49:14</sys_created_on>
         <sys_id>91d97de81b7e3300d8ab2136ec4bcb82</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>Homepage Search Scoped</sys_name>
-        <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
         <sys_policy/>
-        <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
         <sys_update_name>sp_widget_91d97de81b7e3300d8ab2136ec4bcb82</sys_update_name>
-        <sys_updated_by>Shubham</sys_updated_by>
-        <sys_updated_on>2019-07-20 07:34:20</sys_updated_on>
+        <sys_updated_by>A705529</sys_updated_by>
+        <sys_updated_on>2019-08-21 08:55:14</sys_updated_on>
         <template><![CDATA[<div id="homepage-search" class="hidden-xs wrapper-xl">
   <div class="wrapper-xl">
-  	<h2 class="text-center text-3x m-b-lg sp-tagline-color">Welcome to the My Support Portal (MSP)</h2>
+  	<h2 class="text-center text-3x  sp-tagline-color headline">My Support Portal</h2>
   
     
   	<div ng-if="options.short_description" class="text-center h4 m-b-lg sp-tagline-color" ng-bind="options.short_description"></div>

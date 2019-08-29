@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Service" max_length="40" name="x_380489_git_porta_service" type="collection">
-        <element label="Service Description" max_length="40" name="service_description" type="string"/>
+    <element attributes="all_tables.text_index_translations=true" label="Service" max_length="40" name="x_380489_git_porta_service" type="collection">
+        <element label="Category" max_length="32" name="category" reference="sc_category" type="reference"/>
+        <element label="Service Description" max_length="4000" name="service_description" type="translated_html"/>
         <element display="true" label="Service Name" max_length="40" name="service_name" type="string"/>
+        <index name="index">
+            <element name="category"/>
+        </index>
     </element>
 </database>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="MSP Service KOT" max_length="40" name="x_380489_git_porta_msp_service_kot" type="collection">
-        <element display="true" label="KOT" max_length="40" name="kot" type="string"/>
+        <element label="KOT" max_length="40" name="kot" type="string"/>
         <element label="KOT Description" max_length="40" name="kot_description" type="html"/>
         <element label="Order" max_length="40" name="order" type="integer"/>
         <element choice="1" label="Request Type" mandatory="true" max_length="40" name="request_type" type="choice">
@@ -11,7 +11,7 @@
                 <element inactive_on_update="false" label="Request" value="request"/>
             </choice>
         </element>
-        <element label="Service" max_length="32" name="service" reference="x_380489_git_porta_service" type="reference"/>
+        <element display="true" label="Service" max_length="32" name="service" reference="x_380489_git_porta_service" type="reference"/>
         <element label="Service Description" max_length="40" name="service_description" type="html"/>
         <element label="Service Name" max_length="40" name="service_name" type="string"/>
         <index name="index">

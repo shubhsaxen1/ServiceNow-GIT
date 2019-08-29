@@ -9,7 +9,7 @@
         <license_model>none</license_model>
         <logo/>
         <menu/>
-        <name>GIT Portal</name>
+        <name>GIT</name>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
@@ -24,14 +24,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-07-18 11:30:58</sys_created_on>
         <sys_id>957eb99c1bb23300d8ab2136ec4bcb56</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-18 11:30:58</sys_updated_on>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>A705529</sys_updated_by>
+        <sys_updated_on>2019-08-29 08:49:18</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </sys_app>
 </record_update>

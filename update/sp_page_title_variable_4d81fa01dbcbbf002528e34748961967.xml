@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page_title_variable">
+    <sp_page_title_variable action="INSERT_OR_UPDATE">
+        <id_parameter>sys_id</id_parameter>
+        <source_field>sys_name</source_field>
+        <source_table>sc_category</source_table>
+        <sp_page display_value="git_servicelevel_1">37b81e0ddb4bbf002528e3474896198e</sp_page>
+        <sys_class_name>sp_page_title_variable</sys_class_name>
+        <sys_created_by>A663921</sys_created_by>
+        <sys_created_on>2019-08-02 09:26:43</sys_created_on>
+        <sys_id>4d81fa01dbcbbf002528e34748961967</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>page</sys_name>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_update_name>sp_page_title_variable_4d81fa01dbcbbf002528e34748961967</sys_update_name>
+        <sys_updated_by>A663921</sys_updated_by>
+        <sys_updated_on>2019-08-02 09:26:43</sys_updated_on>
+        <variable>page</variable>
+    </sp_page_title_variable>
+</record_update>

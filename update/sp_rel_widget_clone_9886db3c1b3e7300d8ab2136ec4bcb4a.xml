@@ -27,9 +27,9 @@
         <sys_id>9886db3c1b3e7300d8ab2136ec4bcb4a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>cc86db3c1b3e7300d8ab2136ec4bcb47</sys_name>
-        <sys_package display_value="GIT Portal" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
         <sys_policy/>
-        <sys_scope display_value="GIT Portal">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
         <sys_update_name>sp_rel_widget_clone_9886db3c1b3e7300d8ab2136ec4bcb4a</sys_update_name>
         <sys_updated_by>Shubham</sys_updated_by>
         <sys_updated_on>2019-07-20 07:12:36</sys_updated_on>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>sample</category>
+        <client_script><![CDATA[function() {
+  // widget controller
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.sample-footer {&#13;
+  background-color: red; &#13;
+  color: white; &#13;
+  padding: 5px;&#13;
+  font-family:'stag-sans-book' !important;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Git Sample Footer</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+ data.time = new GlideDateTime().getDisplayValue();
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>A762682</sys_created_by>
+        <sys_created_on>2019-08-22 05:56:37</sys_created_on>
+        <sys_id>bc918963dbdbb700d9ba40a505961955</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Git Sample Footer</sys_name>
+        <sys_package display_value="GIT" source="x_380489_git_porta">957eb99c1bb23300d8ab2136ec4bcb56</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GIT">957eb99c1bb23300d8ab2136ec4bcb56</sys_scope>
+        <sys_update_name>sp_header_footer_bc918963dbdbb700d9ba40a505961955</sys_update_name>
+        <sys_updated_by>A705529</sys_updated_by>
+        <sys_updated_on>2019-08-22 06:07:20</sys_updated_on>
+        <template><![CDATA[ <div class="sample-footer">	
+  ${Page generated at {{::c.data.time}}}
+ </div>]]></template>
+    </sp_header_footer>
+</record_update>
